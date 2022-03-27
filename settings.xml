@@ -8,9 +8,9 @@
    </servers>
    <mirrors>
       <mirror>
-         <id>NexusRP</id>
+         <id>Nexus</id>
          <mirrorOf>*</mirrorOf>
-         <url>http://172.17.0.4:8081/repository/Nexus/</url>
+         <url>http://172.19.0.3:8081/repository/Nexus/</url>
       </mirror>
    </mirrors>
    <profiles>
