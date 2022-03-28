@@ -11,6 +11,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.2</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <properties>
@@ -19,16 +20,6 @@
   <build>
     <pluginManagement>
       <plugins>
-        <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>1.6.3</version>
-          <extensions>true</extensions>
-          <configuration>
-            <serverId>Nexus-repository</serverId>
-            <nexusUrl>http://172.21.0.5:8081/</nexusUrl>
-          </configuration>
-        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -74,17 +65,4 @@
       </plugin>
     </plugins>
   </build>
-  <distributionManagement>
-    <repository>
-      <id>Nexus-repository</id>
-      <name>maven-releases</name>
-      <url>http://172.21.0.5:8081/repository/maven-releases/</url>
-    </repository>
-    <!-- Publish the versioned releases here -->
-    <snapshotRepository>
-      <id>Nexus-repository</id>
-      <name>maven-snapshots</name>
-      <url>http://172.21.0.5:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
 </project>
