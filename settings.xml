@@ -1,51 +1,24 @@
-<settings>
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
    <servers>
       <server>
-         <id>Nexus.repository</id>
+         <id>Nexus-repository</id>
          <username>${vpiskunou}</username>
          <password>${vpiskunou_password}</password>
       </server>
    </servers>
    <mirrors>
       <mirror>
-         <id>Nexus.repository</id>
+         <id>Nexus-repository</id>
+         <mirrorOf>external:http:*</mirrorOf>
+         <url>http://0.0.0.0/</url>
+         <blocked>true</blocked>
+      </mirror>
+      <mirror>
+         <id>Nexus-repository</id>
+         <name>Nexus-repository</name>
+         <url>http://172.21.0.2:8081/repository/Nexus-repository/</url>
          <mirrorOf>*</mirrorOf>
-         <url>http://172.21.0.5:8081/repository/Nexus.repository/</url>
       </mirror>
    </mirrors>
-   <profiles>
-      <profile>
-         <id>vpiskunou</id>
-         <!--Enable snapshots for the built in central repo to direct -->
-         <!--all requests to nexus via the mirror -->
-         <repositories>
-            <repository>
-               <id>central</id>
-               <url>http://central</url>
-               <releases>
-                  <enabled>true</enabled>
-               </releases>
-               <snapshots>
-                  <enabled>true</enabled>
-               </snapshots>
-            </repository>
-         </repositories>
-         <pluginRepositories>
-            <pluginRepository>
-               <id>central</id>
-               <url>http://central</url>
-               <releases>
-                  <enabled>true</enabled>
-               </releases>
-               <snapshots>
-                  <enabled>true</enabled>
-               </snapshots>
-            </pluginRepository>
-         </pluginRepositories>
-      </profile>
-   </profiles>
-   <activeProfiles>
-      <!--make the profile active all the time -->
-      <activeProfile>vpiskunou</activeProfile>
-   </activeProfiles>
 </settings>
