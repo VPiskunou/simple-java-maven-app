@@ -1,16 +1,16 @@
 <settings>
    <servers>
       <server>
-         <id>Nexus</id>
+         <id>Nexus.repository</id>
          <username>${vpiskunou}</username>
          <password>${vpiskunou_password}</password>
       </server>
    </servers>
    <mirrors>
       <mirror>
-         <id>Nexus</id>
+         <id>Nexus.repository</id>
          <mirrorOf>*</mirrorOf>
-         <url>http://172.19.0.3:8081/repository/Nexus/</url>
+         <url>http://172.21.0.5:8081/repository/Nexus.repository/</url>
       </mirror>
    </mirrors>
    <profiles>

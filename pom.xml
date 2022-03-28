@@ -25,8 +25,8 @@
           <version>1.6.3</version>
           <extensions>true</extensions>
           <configuration>
-            <serverId>Nexus</serverId>
-            <nexusUrl>http://172.19.0.3:8081/</nexusUrl>
+            <serverId>Nexus.repository</serverId>
+            <nexusUrl>http://172.21.0.5:8081/</nexusUrl>
           </configuration>
         </plugin>
         <plugin>
@@ -76,13 +76,13 @@
   </build>
   <distributionManagement>
     <repository>
-      <id>Nexus</id>
+      <id>Nexus.repository</id>
       <name>maven-releases</name>
-      <url>http://172.19.0.3:8081/repository/maven-releases/</url>
+      <url>http://172.21.0.5:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
-      <id>Nexus</id>
-      <url>http://172.19.0.3:8081/repository/maven-snapshots/</url>
+      <id>Nexus.repository</id>
+      <url>http://172.21.0.5:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
